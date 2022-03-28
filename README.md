@@ -8,11 +8,6 @@ Selenium Grid helps to master the computer (hub) to distributed test cases among
 Selenium Grid allows the execution of WebDriver scripts on remote machines by routing commands sent by the client to remote browser instances.
 It aims to provide an easy way to run tests in parallel on multiple machines, and to manage different browser versions and browser configurations centrally.
 
-Generally speaking, there’s two reasons to use a grid:
-
-- To run the tests against multiple browsers, multiple versions of browser, and browsers running on different operating systems.
-- To reduce the time it takes for the test suite to complete a test pass.
-
 Purposes and main functionalities of Selenium Grid:
 
 - Central entry point for all tests
