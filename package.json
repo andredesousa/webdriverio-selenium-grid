@@ -10,6 +10,7 @@
     "format:fix": "prettier --write \"test/**/*\"",
     "test": "wdio run test/wdio.conf.ts",
     "test:watch": "watch \"wdio run test/wdio.conf.debug.ts\" test --wait=1",
+    "test:debug": "node --inspect-brk node_modules/@wdio/cli/bin/wdio.js test/wdio.conf.debug.ts",
     "test:grid": "wdio run test/wdio.conf.grid.ts",
     "clean": "rimraf build/"
   },

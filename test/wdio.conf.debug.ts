@@ -13,14 +13,5 @@ export const config: WebdriverIO.Config = {
         args: ['--window-size=1920,1080'],
       },
     },
-    {
-      maxInstances: 1,
-      browserName: 'firefox',
-      acceptInsecureCerts: true,
-      excludeDriverLogs: ['*'],
-      'moz:firefoxOptions': {
-        args: ['--width=1920', '--height=1080'],
-      },
-    },
   ],
 };

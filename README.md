@@ -1,6 +1,7 @@
 # Testing web sites using Selenium Grid
 
-This project provides a basic setup for auditing websites using [Selenium Grid](https://www.selenium.dev/documentation/grid/).
+This project provides a basic setup for testing websites using [WebdriverIO](https://webdriver.io/) with [Selenium Grid](https://www.selenium.dev/documentation/grid/).
+Selenium Grid helps to master the computer (hub) to distributed test cases among the slave machines (nodes).
 
 ## Overview
 
@@ -23,6 +24,8 @@ Purposes and main functionalities of Selenium Grid:
 
 [Docker Compose](https://docs.docker.com/compose/) is the simplest way to start a Grid.
 Use the resource provided to start your Selenium Grid.
+To deploy Selenium Grid on [Docker Swarm](https://docs.docker.com/engine/swarm/) use `docker stack deploy -c docker-compose.yml grid`.
+Stop it with `docker stack rm grid`.
 
 ## Available npm scripts
 
@@ -35,6 +38,7 @@ The next scripts should be executed in a console inside the root directory:
 - `lint:fix` - Applies lint rules to project code.
 - `test` - Runs the e2e tests.
 - `test:watch` - Runs the e2e tests in watch mode.
+- `test:debug` - Runs the e2e tests in debug mode.
 - `test:grid` - Runs the e2e tests with a Selenium Grid.
 - `clean` - Deletes the temporary files.
 
@@ -59,8 +63,17 @@ Depending on your editor, you may want to add an editor extension to lint and fo
 
 The end-to-end tests are responsible for testing scenarios on the product itself, by controlling the browser or the website, regardless of the internal structure to ensure expected behavior.
 
-Use `npm run test` to execute the end-to-end tests via [WebdriverIO](https://webdriver.io/).
+Use `npm run test` to execute the end-to-end tests via WebdriverIO.
 Use `npm run test:watch` to keep executing your tests while watching for file changes in the background.
+
+This project offers the possibility to run end-to-end tests on a Selenium Grid.
+Use `npm run test:grid` to run the end-to-end tests on a Selenium Grid.
+
+## Debugging
+
+You can use your IDE for debugging end-to-end tests.
+Also, you can debug tests with `browser.debug()` to pause your test and inspect the browser.
+If you run `npm run test:debug`, you need to open the `chrome://inspect` page.
 
 ## Commit messages convention
 
@@ -103,5 +116,6 @@ For further reference, please consider the following articles:
 
 - [npm scripts](https://docs.npmjs.com/cli/v8/using-npm/scripts)
 - [Semantic Versioning](https://semver.org/)
-- [Testrunner Configuration](https://webdriver.io/docs/configurationfile)
+- [WebdriverIO: Testrunner Configuration](https://webdriver.io/docs/configurationfile)
+- [WebdriverIO: Debugging](https://webdriver.io/docs/debugging)
 - [Selenium Grid](https://www.selenium.dev/documentation/grid/)

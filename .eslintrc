@@ -51,7 +51,7 @@
     "import/no-extraneous-dependencies": [
       "error",
       {
-        "devDependencies": ["**/*.spec.ts", "**/*.page.ts"]
+        "devDependencies": ["**/*.e2e.ts", "**/*.page.ts"]
       }
     ],
     "import/prefer-default-export": "off",

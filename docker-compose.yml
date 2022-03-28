@@ -1,8 +1,3 @@
-# To start Docker in Swarm mode, you need to run `docker swarm init`
-# To deploy the Grid, `docker stack deploy -c docker-compose.yml grid`
-# Stop with `docker stack rm grid`
-# Stop swarm mode `docker swarm leave --force`
-
 version: '3.7'
 
 services:
