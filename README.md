@@ -34,6 +34,7 @@ The next scripts should be executed in a console inside the root directory:
 - `test` - Runs the e2e tests.
 - `test:watch` - Runs the e2e tests in watch mode.
 - `test:debug` - Runs the e2e tests in debug mode.
+- `test:android` - Runs the e2e tests in android device.
 - `test:grid` - Runs the e2e tests with a Selenium Grid.
 - `clean` - Deletes the temporary files.
 
@@ -70,41 +71,6 @@ You can use your IDE for debugging end-to-end tests.
 Also, you can debug tests with `browser.debug()` to pause your test and inspect the browser.
 If you run `npm run test:debug`, you need to open the `chrome://inspect` page.
 
-## Commit messages convention
-
-In order to have a consistent git history every commit must follow a specific template. Here's the template:
-
-```bash
-<type>(<ITEM ID>?): <subject>
-```
-
-### Type
-
-Must be one of the following:
-
-- **build**: Changes that affect the build system or external dependencies (example scopes: gulp, npm)
-- **ci**: Changes to our CI configuration files and scripts (example scopes: Jenkins, Travis, Circle, SauceLabs)
-- **chore**: Changes to the build process or auxiliary tools and libraries such as documentation generation
-- **docs**: Documentation only changes
-- **feat**: A new feature
-- **fix**: A bug fix
-- **perf**: A code change that improves performance
-- **refactor**: A code change that neither fixes a bug nor adds a feature
-- **revert**: A commit that reverts a previous one
-- **style**: Changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc.)
-- **test**: Adding missing tests or correcting existing tests
-
-### ITEM ID
-
-The related **issue** or **user story** or even **defect**.
-
-- For **user stories**, you shoud use `US-` as prefix. Example: `feat(US-4321): ...`
-- For **no related issues** or **defects** you should leave it blank. Example: `feat: ...`
-
-### Subject
-
-The subject contains a succinct description of the change.
-
 ## Reference documentation
 
 For further reference, please consider the following articles:
@@ -113,4 +79,5 @@ For further reference, please consider the following articles:
 - [Semantic Versioning](https://semver.org/)
 - [WebdriverIO: Testrunner Configuration](https://webdriver.io/docs/configurationfile)
 - [WebdriverIO: Debugging](https://webdriver.io/docs/debugging)
+- [Appium: Getting Started](https://appium.io/docs/en/about-appium/getting-started/)
 - [Selenium Grid](https://www.selenium.dev/documentation/grid/)

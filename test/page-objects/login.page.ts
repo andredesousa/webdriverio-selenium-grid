@@ -20,6 +20,10 @@ export class LoginPage extends Page {
     return $('button[type="submit"]');
   }
 
+  public get body(): ChainablePromiseElement<WebdriverIO.Element> {
+    return $('body');
+  }
+
   /**
    * a method to encapsule automation code to interact with the page
    * e.g. to login using username and password
@@ -27,6 +31,7 @@ export class LoginPage extends Page {
   public async login(username: string, password: string): Promise<void> {
     await this.inputUsername.setValue(username);
     await this.inputPassword.setValue(password);
+    await this.body.click(); // click outside
     await this.btnSubmit.click();
   }
 
