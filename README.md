@@ -19,6 +19,7 @@ Purposes and main functionalities of Selenium Grid:
 
 This project provides a resource to start your Selenium Grid.
 To deploy Selenium Grid on [Docker Swarm](https://docs.docker.com/engine/swarm/) use `docker stack deploy -c docker-compose.yml grid`.
+After deploy, point your WebDriver tests to <http://localhost:4444>.
 Stop it with `docker stack rm grid`.
 Selenium project offers a Helm chart to deploy these Docker images to [Kubernetes](https://kubernetes.io/).
 Read more details at the Helm [readme](https://github.com/SeleniumHQ/docker-selenium/blob/trunk/chart/selenium-grid/README.md).
