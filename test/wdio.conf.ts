@@ -8,8 +8,9 @@ export const config: WebdriverIO.Config = {
   },
   specs: ['./test/specs/**/*.ts'],
   logLevel: 'warn',
-  waitforTimeout: 10000,
-  connectionRetryTimeout: 120000,
+  bail: 0,
+  waitforTimeout: 5000,
+  connectionRetryTimeout: 60000,
   connectionRetryCount: 3,
   maxInstances: 8,
   capabilities: [
@@ -35,7 +36,7 @@ export const config: WebdriverIO.Config = {
   services: ['chromedriver', 'geckodriver'],
   framework: 'jasmine',
   jasmineOpts: {
-    defaultTimeoutInterval: 60000,
+    defaultTimeoutInterval: 30000,
   },
   reporters: ['spec'],
 };

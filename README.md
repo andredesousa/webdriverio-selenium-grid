@@ -71,6 +71,10 @@ Use `npm run test:android` to execute the end-to-end tests in Android devices.
 This project offers the possibility to run end-to-end tests on a Selenium Grid.
 Use `npm run test:grid` to run the end-to-end tests on a Selenium Grid.
 
+If you want to exclude a specific test, simply use `xit()` or `xdescribe()`.
+If you want to run a specific test, use `fit()` or `fdescribe()`.
+The `x` means exclude and the `f` stands for focused.
+
 ## Debugging
 
 You can use your IDE for debugging end-to-end tests.
