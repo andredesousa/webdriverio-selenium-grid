@@ -17,10 +17,14 @@ Purposes and main functionalities of Selenium Grid:
 - Cross-platform testing
 - Load balancing
 
-[Docker Compose](https://docs.docker.com/compose/) is the simplest way to start a Grid.
-Use the resource provided to start your Selenium Grid.
+This project provides a resource to start your Selenium Grid.
 To deploy Selenium Grid on [Docker Swarm](https://docs.docker.com/engine/swarm/) use `docker stack deploy -c docker-compose.yml grid`.
 Stop it with `docker stack rm grid`.
+Selenium project offers a Helm chart to deploy these Docker images to [Kubernetes](https://kubernetes.io/).
+Read more details at the Helm [readme](https://github.com/SeleniumHQ/docker-selenium/blob/trunk/chart/selenium-grid/README.md).
+
+Support for mobile browsers is provided via [Appium](https://appium.io/).
+Appium is an open-source tool for automating native, mobile web, and hybrid applications on iOS mobile, Android mobile, and Windows desktop platforms.
 
 ## Available npm scripts
 
@@ -34,7 +38,7 @@ The next scripts should be executed in a console inside the root directory:
 - `test` - Runs the e2e tests.
 - `test:watch` - Runs the e2e tests in watch mode.
 - `test:debug` - Runs the e2e tests in debug mode.
-- `test:android` - Runs the e2e tests in android device.
+- `test:android` - Runs the e2e tests in Android device.
 - `test:grid` - Runs the e2e tests with a Selenium Grid.
 - `clean` - Deletes the temporary files.
 
@@ -61,6 +65,7 @@ The end-to-end tests are responsible for testing scenarios on the product itself
 
 Use `npm run test` to execute the end-to-end tests via WebdriverIO.
 Use `npm run test:watch` to keep executing your tests while watching for file changes in the background.
+Use `npm run test:android` to execute the end-to-end tests in Android devices.
 
 This project offers the possibility to run end-to-end tests on a Selenium Grid.
 Use `npm run test:grid` to run the end-to-end tests on a Selenium Grid.
