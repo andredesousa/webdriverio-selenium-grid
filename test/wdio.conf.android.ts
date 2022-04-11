@@ -2,7 +2,6 @@ import { config as baseConfig } from './wdio.conf';
 
 export const config: WebdriverIO.Config = {
   ...baseConfig,
-  services: ['appium'],
   port: 4723,
   maxInstances: 1,
   capabilities: [
@@ -13,5 +12,16 @@ export const config: WebdriverIO.Config = {
       deviceName: 'Nexus 5 API 30',
       platformVersion: '11.0',
     },
+  ],
+  services: [
+    [
+      'appium',
+      {
+        command: 'appium',
+        args: {
+          relaxedSecurity: true,
+        },
+      },
+    ],
   ],
 };
