@@ -6,8 +6,24 @@ export const config: WebdriverIO.Config = {
       project: 'test/tsconfig.json',
     },
   },
-  specs: ['./test/specs/**/*.ts'],
+  framework: 'jasmine',
+  jasmineOpts: {
+    defaultTimeoutInterval: 30000,
+  },
   logLevel: 'warn',
+  specs: ['./test/specs/**/*.ts'],
+  reporters: [
+    'spec',
+    [
+      'allure',
+      {
+        outputDir: 'reports/xml',
+        disableWebdriverStepsReporting: true,
+        disableWebdriverScreenshotsReporting: false,
+        addConsoleLogs: true,
+      },
+    ],
+  ],
   bail: 0,
   waitforTimeout: 5000,
   connectionRetryTimeout: 60000,
@@ -34,9 +50,4 @@ export const config: WebdriverIO.Config = {
     },
   ],
   services: ['chromedriver', 'geckodriver'],
-  framework: 'jasmine',
-  jasmineOpts: {
-    defaultTimeoutInterval: 30000,
-  },
-  reporters: ['spec'],
 };

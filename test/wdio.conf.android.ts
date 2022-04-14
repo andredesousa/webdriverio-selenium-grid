@@ -3,6 +3,7 @@ import { config as baseConfig } from './wdio.conf';
 export const config: WebdriverIO.Config = {
   ...baseConfig,
   port: 4723,
+  reporters: ['spec'],
   maxInstances: 1,
   capabilities: [
     {

@@ -2,7 +2,6 @@ import { config as baseConfig } from './wdio.conf';
 
 export const config: WebdriverIO.Config = {
   ...baseConfig,
-  services: [],
   hostname: 'localhost',
   port: 4444,
   path: '/wd/hub',
@@ -28,4 +27,5 @@ export const config: WebdriverIO.Config = {
       excludeDriverLogs: ['*'],
     },
   ],
+  services: [],
 };
