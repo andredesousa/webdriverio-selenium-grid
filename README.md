@@ -57,7 +57,7 @@ It's recommended to use them in your projects because:
 - They catch errors. Prettier, not so much, but ESLint catches a lot of syntax errors and simple forms of type errors, such as undefined variables.
 - Setting these things up is a one-time cost, but the time-saving benefits compound over time.
 
-Run `npm run lint` to analyze your code. Many problems can be automatically fixed with `npm run lint:fix`.
+Use `npm run lint` to analyze your code. Many problems can be automatically fixed with `npm run lint:fix`.
 Depending on your editor, you may want to add an editor extension to lint and format your code while you type or on-save.
 
 ## Running end-to-end tests
@@ -79,14 +79,13 @@ The `x` means exclude and the `f` stands for focused.
 
 You can use your IDE for debugging end-to-end tests.
 Also, you can debug tests with `browser.debug()` to pause your test and inspect the browser.
-If you run `npm run test:debug`, you need to open the `chrome://inspect` page.
+If you use `npm run test:debug`, you need to open the `chrome://inspect` page.
 
 ## Reference documentation
 
 For further reference, please consider the following articles:
 
 - [npm scripts](https://docs.npmjs.com/cli/v8/using-npm/scripts)
-- [Semantic Versioning](https://semver.org/)
 - [WebdriverIO: Testrunner Configuration](https://webdriver.io/docs/configurationfile)
 - [WebdriverIO: Debugging](https://webdriver.io/docs/debugging)
 - [Appium: Getting Started](https://appium.io/docs/en/about-appium/getting-started/)
